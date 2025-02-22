@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="crv" class="io.pragra.learning.pragraplex.springiocdemo.Honda">
+        <constructor-arg name="engine" value="Petrol Engine"/>
+        <constructor-arg name="name" value="crv"/>
+        <constructor-arg name="brake" ref="mechBrake"/>
+    </bean>
+
+    <bean name="civic" class="io.pragra.learning.pragraplex.springiocdemo.Honda">
+        <constructor-arg name="engine" value="Diesel Engine"/>
+        <constructor-arg name="name" value="Civic"/>
+        <constructor-arg name="brake" ref="hydraulicBrake"/>
+    </bean>
+
+    <bean name="mechBrake" class="io.pragra.learning.pragraplex.springiocdemo.MechanicalBrake"/>
+    <bean name="hydraulicBrake" class="io.pragra.learning.pragraplex.springiocdemo.HydraulicBrake"/>
+
+
+    <bean id="student" class="io.pragra.learning.pragraplex.springiocdemo.Student">
+        <constructor-arg index="0" value="45"/>
+        <constructor-arg index="1">
+            <list>
+                <value></value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="2" value="55"/>
+        <constructor-arg index="3">
+            <set>
+                <value></value>
+            </set>
+        </constructor-arg>
+        <property name="id" value="10"></property>
+        <property name="name">
+            <list>
+                <value>Jay</value>
+                <value>Sachin</value>
+                <value>Sourav</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
