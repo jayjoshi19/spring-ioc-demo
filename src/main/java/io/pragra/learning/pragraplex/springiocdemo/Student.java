@@ -1,20 +1,30 @@
 package io.pragra.learning.pragraplex.springiocdemo;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Student {
 
     private int id;
-    private List<String> name;
+    //private List<String> namesOfStudents;
     private double marks;
     private Set<String> email;
+    private Map<String, Integer> studMap;
 
-    public Student(int id, List<String> name, double marks, Set<String> email) {
+    /*public Student(int id, List<String> namesOfStudents, double marks, Set<String> email, Map<String, Integer> studMap) {
         this.id = id;
-        this.name = name;
+        this.namesOfStudents = namesOfStudents;
         this.marks = marks;
         this.email = email;
+        this.studMap = studMap;
+    }*/
+
+    public Student(int id, double marks, Set<String> email, Map<String, Integer> studMap) {
+        this.id = id;
+        this.marks = marks;
+        this.email = email;
+        this.studMap = studMap;
     }
 
     public int getId() {
@@ -23,14 +33,6 @@ public class Student {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public List<String> getName() {
-        return name;
-    }
-
-    public void setName(List<String> name) {
-        this.name = name;
     }
 
     public double getMarks() {
@@ -49,13 +51,21 @@ public class Student {
         this.email = email;
     }
 
+    public Map<String, Integer> getStudMap() {
+        return studMap;
+    }
+
+    public void setStudMap(Map<String, Integer> studMap) {
+        this.studMap = studMap;
+    }
+
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Student{");
         sb.append("id=").append(id);
-        sb.append(", name='").append(name).append('\'');
         sb.append(", marks=").append(marks);
-        sb.append(", email='").append(email).append('\'');
+        sb.append(", email=").append(email);
+        sb.append(", studMap=").append(studMap);
         sb.append('}');
         return sb.toString();
     }

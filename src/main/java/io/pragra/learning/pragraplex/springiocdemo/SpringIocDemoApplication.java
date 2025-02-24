@@ -18,6 +18,9 @@ public class SpringIocDemoApplication {
         System.out.println(crv);
         System.out.println(civic);
 
+        Student student = context.getBean("student", Student.class);
+        System.out.println(student);
+
 
     }
 
