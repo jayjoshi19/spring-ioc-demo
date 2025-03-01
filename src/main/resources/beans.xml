@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean name="crv" class="io.pragra.learning.pragraplex.springiocdemo.Honda">
+    <!--<bean name="crv" class="io.pragra.learning.pragraplex.springiocdemo.Honda">
         <constructor-arg name="engine" value="Petrol Engine"/>
         <constructor-arg name="name" value="crv"/>
         <constructor-arg name="brake" ref="mechBrake"/>
@@ -17,18 +17,22 @@
     </bean>
 
     <bean name="mechBrake" class="io.pragra.learning.pragraplex.springiocdemo.MechanicalBrake"/>
-    <bean name="hydraulicBrake" class="io.pragra.learning.pragraplex.springiocdemo.HydraulicBrake"/>
+    <bean name="hydraulicBrake" class="io.pragra.learning.pragraplex.springiocdemo.HydraulicBrake"/>-->
 
+
+    <!--<bean name="employee" class="io.pragra.learning.pragraplex.springiocdemo.Employee">
+        <property name="firstName" value="Jay"/>
+        <property name="lastName" value="Joshi"/>
+    </bean>-->
+
+    <bean name="mysql" class="io.pragra.learning.pragraplex.springiocdemo.DBConnection" init-method="establishConnection" destroy-method="disconnectConnection">
+        <property name="url" value="jdbc:mysql://123.43.45.65:3306"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root123"/>
+    </bean>
 
     <bean id="student" class="io.pragra.learning.pragraplex.springiocdemo.Student">
         <constructor-arg name="id" value="10"/>
-        <!--<constructor-arg name="namesOfStudents">
-            <list>
-                <value>Jay</value>
-                <value>Sachin</value>
-                <value>Sourav</value>
-            </list>
-        </constructor-arg>-->
         <constructor-arg name="marks" value="90.0"/>
         <constructor-arg name="email">
             <set>

@@ -14,10 +14,14 @@ public class Honda {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Honda{");
-        sb.append("engine='").append(engine).append('\'');
-        sb.append(", name='").append(name).append('\'');
+        sb.append("name='").append(name).append('\'');
+        sb.append(", engine='").append(engine).append('\'');
         sb.append(", brake=").append(brake);
         sb.append('}');
         return sb.toString();
+    }
+
+    public void initialize(){
+        System.out.println("Init method called for Honda " + name);
     }
 }

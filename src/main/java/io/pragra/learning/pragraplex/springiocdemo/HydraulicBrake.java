@@ -9,4 +9,8 @@ public class HydraulicBrake implements IBrake{
     public String toString() {
         return super.toString();
     }
+
+    public void initialize(){
+        System.out.println("Init method called for HydraulicBrake");
+    }
 }
