@@ -32,4 +32,32 @@ public class AppConfig {
     public HydraulicBrake hydraulicBrake(){
         return new HydraulicBrake();
     }
+
+    @Bean
+    public String abc(){
+        return "abc";
+    }
+
+    @Bean
+    public String xyz(){
+        return "xyz";
+    }
+
+    @Bean
+    public String test(){
+        return "test";
+    }
+
+    @Bean
+    public String firstName(){
+        return "Jay";
+    }
+
+    public Employee employee1(){
+        return new Employee("Jay");
+    }
+
+    public Employee employee2(){
+        return new Employee("Sachin");
+    }
 }

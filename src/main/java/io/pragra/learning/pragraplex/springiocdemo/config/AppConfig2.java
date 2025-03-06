@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig2 {
 
-    @Bean(initMethod = "initialize")
+    /*@Bean(initMethod = "initialize")
     public Employee employee(){
         return new Employee("Jay", "Joshi");
-    }
+    }*/
 }
